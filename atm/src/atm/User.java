@@ -20,6 +20,14 @@ public class User {
 //	The list of accounts of the user
 	private ArrayList <Account> accounts;
 	
+	/* 
+	 * Create new user
+	 * @param firstName the user's first name
+	 * @param lastName the user's last name
+	 * @param pin the user's account pin number 
+	 * @param theBank the Bank object that the user is a customer of  
+	 * */
+	
 	public User (String firstName, String lastName, String pin, Bank theBank) {
 		
 //		set user's name
@@ -35,5 +43,14 @@ public class User {
 			e.printStackTrace();
 			System.exit(1);
 		}
+		
+//		get a new, unique universal ID for the user
+		this.uuid = theBank.getNewUserUUID();
+		
+//		create empty list of accounts
+		this.accounts = new ArrayList<Account>();
+		
+//		print log message
+		System.out.print("New user %s, %s with ID %s created. \n", firstName, lastName, this.uuid);
 	}
 }
