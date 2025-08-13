@@ -10,4 +10,7 @@ public class Bank {
 	public String getNewUserUUID() {
 		
 	}
+	public String getNewAccountUUID() {
+		
+	}
 }
