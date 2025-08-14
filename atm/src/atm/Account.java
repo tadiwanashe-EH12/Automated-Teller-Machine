@@ -6,9 +6,6 @@ public class Account {
 //	the name of the account
 	private String name;
 	
-//	the current balance of the account
-	private double balance;
-	
 //	The current ID number
 	private String uuid;
 	
@@ -18,6 +15,12 @@ public class Account {
 // The transaction list for the account 
 	private ArrayList<Transaction> transactions;
 	
+	/*
+	 * Create new user
+	 * @param name the name of the account
+	 * @param holder the user object that holds this account
+	 * @param theBank the bank issues the account
+	 * */
 	public Account(String name, User holder, Bank theBank) {
 		
 //		set the account name and holder

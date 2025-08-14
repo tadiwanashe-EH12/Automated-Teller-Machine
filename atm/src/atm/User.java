@@ -53,4 +53,7 @@ public class User {
 //		print log message
 		System.out.print("New user %s, %s with ID %s created. \n", firstName, lastName, this.uuid);
 	}
+	public void addAccount (Account anAcct) {
+		this.accounts.add(anAcct);
+	}
 }
