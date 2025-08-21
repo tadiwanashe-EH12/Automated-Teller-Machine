@@ -14,5 +14,14 @@ public class Transaction {
 //The account in which the transaction was performed 
 	private Account inAccount;
 	
-	
+	public Transaction(double amount, Account inAccount) {
+		this.amount = amount;
+		this.inAccount = inAccount;
+		this.timestamp = new Date();
+		this.memo = "";
+	}
+	public Transaction(double amount, String memo, Account inAccount) {
+//		call the two Arg constructor first
+		this(amount, inAccount);
+	}
 }
